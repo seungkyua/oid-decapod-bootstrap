@@ -3,6 +3,10 @@ global:
     repository: quay.io/argoproj/argocd
 server:
   service:
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512M
     type: NodePort
   extraArgs:
     - --insecure
